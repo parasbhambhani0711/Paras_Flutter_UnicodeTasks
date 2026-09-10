@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "40837142613",
+    "project_id": "studybrahmastra-1874b",
+    "storage_bucket": "studybrahmastra-1874b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40837142613:android:517bdd0c5aa42a490f1cdc",
+        "android_client_info": {
+          "package_name": "com.example.study_brahmastra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7WdaThN8opE8ZXeCl6_VFXWWjk8xyoM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
