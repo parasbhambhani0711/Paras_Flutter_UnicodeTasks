@@ -1,9 +1,3 @@
-plugins {
-    id "com.android.application"
-    id "kotlin-android"
-    id "dev.flutter.flutter-decoder"
-    id("com.google.gms.google-services")
-}
 allprojects {
     repositories {
         google()
