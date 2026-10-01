@@ -1,8 +1,9 @@
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class GeminiRepository {
-  final String apiKey = "AQ.Ab8RN6Ia2VFdoaGlvrUX54t8MK4MuKilUfqv-pMYR9JcInjowQ";
+  final String apiKey = dotenv.env['GEMINI_API_KEY'] ?? '';
 
   final List<String> _fallbackModels = [
     'gemini-3.8-flash',
@@ -53,7 +54,8 @@ class GeminiRepository {
           if (response.statusCode == 503 || response.statusCode == 429) {
             break;
           } else {
-            throw Exception("Gemini Error (${response.statusCode}): $lastError");
+            throw Exception(
+                "Gemini Error (${response.statusCode}): $lastError");
           }
         } catch (e) {
           if (attempt == 1) rethrow;
@@ -61,6 +63,7 @@ class GeminiRepository {
       }
     }
 
-    throw Exception("All servers busy right now. Please try in 5 seconds. ($lastError)");
+    throw Exception(
+        "All servers busy right now. Please try in 5 seconds. ($lastError)");
   }
 }

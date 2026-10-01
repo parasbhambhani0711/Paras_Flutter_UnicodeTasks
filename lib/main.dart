@@ -1,4 +1,4 @@
-// ignore_for_file: use_build_context_synchronously
+// ignore_for_file: unused_import, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -14,6 +14,7 @@ import 'features/Login/bloc/auth_bloc.dart';
 import 'features/to-do/bloc/todo_bloc.dart';
 import 'features/Notes/bloc/notes_bloc.dart';
 import 'features/Chatbot/bloc/chatbot_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
